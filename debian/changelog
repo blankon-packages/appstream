@@ -1,3 +1,9 @@
+appstream (0.9.6-1blankon2) tambora; urgency=medium
+
+  * Rebuild again 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 08 Jul 2016 22:59:43 +0700
+
 appstream (0.9.6-1blankon1) tambora; urgency=medium
 
   * Rebuild  
