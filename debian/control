@@ -1,0 +1,157 @@
+Source: appstream
+Section: admin
+Priority: optional
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
+XSBC-Original-Maintainer: Matthias Klumpp <mak@debian.org>
+Build-Depends: cmake (>= 2.8),
+               debhelper (>= 9.0.0),
+               gtk-doc-tools,
+               intltool,
+               libgirepository1.0-dev (>= 1.32),
+               libglib2.0-dev (>= 2.46),
+               libprotobuf-dev,
+               libxapian-dev (>= 1.2.12),
+               libxml2-dev (>= 2.8.0),
+               libyaml-dev,
+               protobuf-compiler,
+               qtbase5-dev (>= 5.4),
+               valac,
+               xmlto
+Standards-Version: 3.9.8
+Homepage: http://www.freedesktop.org/wiki/Distributions/AppStream/
+Vcs-Git: https://anonscm.debian.org/git/pkg-packagekit/appstream.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-packagekit/appstream.git
+
+Package: appstream
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Breaks: appstream-index (<< ${source:Version})
+Provides: appstream-index
+Description: Software component index
+ AppStream is a cross-distribution effort for creating and sharing
+ metadata of software components available in the package repositories
+ of a distribution.
+ It provides specifications for an unified software component metadata format,
+ screenshot and icon services and various other metadata to describe software
+ in repositories.
+ The metadata can be used to show details about the actual software in software
+ management tools instead of just listing packages, making software management
+ intuitive and easy.
+ .
+ This package provides tools to generate, maintain and query the
+ AppStream database of installed and available software, and enables AppStream
+ integration in APT.
+ .
+ The 'appstreamcli' tool can be used for accessing the software component
+ database as well as for working with AppStream XML metadata directly, including
+ validating it for compliance with the specification.
+
+Package: libappstream3
+Architecture: any
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Library to access AppStream services
+ AppStream is a cross-distribution effort for creating and sharing
+ metadata of software components available in the package repositories
+ of a distribution.
+ It provides specifications for an unified software component metadata format
+ and provides tools to read, write and validate the metadata.
+ .
+ This package contains a GObject-based library to access AppStream
+ services, like the software component metadata database.
+ It also contains functions for working with AppStream XML metadata.
+
+Package: libappstream-dev
+Architecture: any
+Section: libdevel
+Depends: libappstream3 (= ${binary:Version}),
+         libglib2.0-dev (>= 2.46),
+         ${misc:Depends}
+Suggests: dep11-tools
+Description: Library to access AppStream services (development files)
+ AppStream is a cross-distribution effort for creating and sharing
+ metadata of software components available in the package repositories
+ of a distribution.
+ It provides specifications for an unified software component metadata format
+ and provides tools to read, write and validate the metadata.
+ .
+ This package contains development files necessary to develop
+ software-management tools which use the AppStream library.
+
+Package: gir1.2-appstream
+Architecture: any
+Section: introspection
+Depends: gir1.2-freedesktop (>= 1.32),
+         gir1.2-glib-2.0 (>= 1.46),
+         libappstream3 (= ${binary:Version}),
+         ${misc:Depends}
+Description: Library to access AppStream services (introspection data)
+ AppStream is a cross-distribution effort for creating and sharing
+ metadata of software components available in the package repositories
+ of a distribution.
+ It provides specifications for an unified software component metadata format
+ and provides tools to read, write and validate the metadata.
+ .
+ This package contains introspection data for the AppStream library.
+
+Package: libappstreamqt1
+Architecture: any
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: appstream (>= ${binary:Version})
+Description: Qt5 library to access AppStream services
+ AppStream is a cross-distribution effort for creating and sharing
+ metadata of software components available in the package repositories
+ of a distribution.
+ It provides specifications for an unified software component metadata format
+ and provides tools to read, write and validate the metadata.
+ .
+ This package contains a Qt-based library to access AppStream
+ services, like the software component metadata database.
+
+Package: libappstreamqt-dev
+Architecture: any
+Section: libdevel
+Depends: libappstreamqt1 (= ${binary:Version}),
+         qtbase5-dev (>= 5.4),
+         ${misc:Depends}
+Description: Qt5 library to access AppStream services (development files)
+ AppStream is a cross-distribution effort for creating and sharing
+ metadata of software components available in the package repositories
+ of a distribution.
+ It provides specifications for an unified software component metadata format
+ and provides tools to read, write and validate the metadata.
+ .
+ This package contains development files necessary to develop
+ software-management tools which use the Qt5-based AppStream library.
+
+Package: appstream-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Suggests: appstream
+Description: Developer documentation for AppStream
+ AppStream is a cross-distribution effort for creating and sharing
+ metadata of software components available in the package repositories
+ of a distribution.
+ It provides specifications for an unified software component metadata format
+ and provides tools to read, write and validate the metadata.
+ .
+ This package provides developer documentation for AppStream.
+
+Package: appstream-index
+Architecture: all
+Section: oldlibs
+Priority: extra
+Depends: appstream (>= ${source:Version}),
+         ${misc:Depends}
+Description: Transitional package (appstream-index -> appstream)
+ Transitional dummy package replacing appstream-index with
+ appstream.

@@ -1,0 +1,117 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: AppStream
+Upstream-Contact: Matthias Klumpp <matthias@tenstral.net>
+Source: http://www.freedesktop.org/wiki/Distributions/AppStream/
+
+Files: *
+Copyright: Matthias Klumpp <matthias@tenstral.net>
+License: GPL-2+ and LGPL-2.1+
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: LGPL-2.1+
+ This library is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation, either version 2.1 of the License, or
+ (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this library.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in "/usr/share/common-licenses/LGPL-2.1".
+
+Files: ./src/appstream.h
+ ./src/as-cache-builder.c
+ ./src/as-cache-builder.h
+ ./src/as-category.c
+ ./src/as-category.h
+ ./src/as-component-private.h
+ ./src/as-component.c
+ ./src/as-component.h
+ ./src/as-data-pool.c
+ ./src/as-data-pool.h
+ ./src/as-database.c
+ ./src/as-database.h
+ ./src/as-distro-details.c
+ ./src/as-distro-details.h
+ ./src/as-enums.c
+ ./src/as-enums.h
+ ./src/as-icon.c
+ ./src/as-icon.h
+ ./src/as-image.c
+ ./src/as-image.h
+ ./src/as-menu-parser.c
+ ./src/as-menu-parser.h
+ ./src/as-metadata.c
+ ./src/as-metadata.h
+ ./src/as-provided.c
+ ./src/as-provided.h
+ ./src/as-release.c
+ ./src/as-release.h
+ ./src/as-screenshot.c
+ ./src/as-screenshot.h
+ ./src/as-settings-private.h
+ ./src/as-utils-private.h
+ ./src/as-utils.h
+ ./src/as-validator-issue.c
+ ./src/as-validator.c
+ ./src/as-validator.h
+ ./src/as-xmldata.c
+ ./src/as-xmldata.h
+ ./src/as-yamldata.c
+ ./src/as-yamldata.h
+ ./src/xapian/database-schema.hpp
+ ./src/xapian/database-cwrap.hpp
+ ./src/xapian/database-read.hpp
+ ./src/xapian/database-write.cpp
+ ./src/xapian/database-write.hpp
+Copyright: 2012-2016, Matthias Klumpp <matthias@tenstral.net>
+License: LGPL-2.1+
+
+Files: ./qt/component.cpp
+ ./qt/component.h
+ ./qt/database.h
+ ./qt/image.cpp
+ ./qt/image.h
+ ./qt/provides.cpp
+ ./qt/provides.h
+ ./qt/screenshot.cpp
+ ./qt/screenshot.h
+Copyright: 2014, Sune Vuorela <sune@vuorela.dk>
+ 2016, Matthias Klumpp <matthias@tenstral.net>
+License: LGPL-2.1+
+
+Files: ./tools/*
+Copyright: 2012-2016, Matthias Klumpp <matthias@tenstral.net>
+License: GPL-2+
+
+Files: ./src/xapian/database-read.cpp
+Copyright: 2009, Michael Vogt <mvo@debian.org>
+  2012-2014, Matthias Klumpp <matthias@tenstral.net>
+License: LGPL-2.1+
+
+Files: ./qt/database.cpp
+Copyright: 2012-2016, Matthias Klumpp <matthias@tenstral.net>
+  2014, Sune Vuorela <sune@vuorela.dk>
+License: LGPL-2.1+
