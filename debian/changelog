@@ -1,3 +1,17 @@
+appstream (0.9.7-1blankon1) tambora; urgency=medium
+
+  * Rebuild for tambora
+
+ -- Syai Mif <syaimif@localhost>  Fri, 22 Jul 2016 06:50:35 +0700
+
+appstream (0.9.7-1) unstable; urgency=medium
+
+  * New upstream release: 0.9.7
+  * Update package descriptions
+  * Update .symbols file
+
+ -- Matthias Klumpp <mak@debian.org>  Wed, 20 Jul 2016 16:58:46 +0200
+
 appstream (0.9.6-1blankon2) tambora; urgency=medium
 
   * Rebuild again 
