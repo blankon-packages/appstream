@@ -1,3 +1,9 @@
+appstream (0.10.0-2blankon2) tambora; urgency=medium
+
+  * Support armhf 
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Tue, 20 Sep 2016 20:09:15 +0700
+
 appstream (0.10.0-2blankon1) tambora; urgency=medium
 
   * Rebuild 
