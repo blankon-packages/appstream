@@ -1,8 +1,15 @@
-appstream (0.10.2-1blankon1) tambora; urgency=medium
+appstream (0.10.3-1blankon1) tambora; urgency=medium
 
-  * Sync Shit sid 
+  * Upload to tambora 
 
- -- Rahman Yusri Aftian <aftian@blankon.id>  Sat, 22 Oct 2016 08:28:11 +0700
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Fri, 04 Nov 2016 14:10:06 +0700
+
+appstream (0.10.3-1) unstable; urgency=medium
+
+  * New upstream version 0.10.3
+  * Update Qt package name for API break
+
+ -- Matthias Klumpp <mak@debian.org>  Tue, 01 Nov 2016 16:46:12 +0100
 
 appstream (0.10.2-1) unstable; urgency=medium
 
@@ -30,18 +37,6 @@ appstream (0.10.1-1) unstable; urgency=medium
   * Properly clean up the global cache on purge
 
  -- Matthias Klumpp <mak@debian.org>  Fri, 16 Sep 2016 14:28:38 +0200
-
-appstream (0.10.0-2blankon2) tambora; urgency=medium
-
-  * Support armhf 
-
- -- Rahman Yusri Aftian <aftian@blankon.id>  Tue, 20 Sep 2016 20:09:15 +0700
-
-appstream (0.10.0-2blankon1) tambora; urgency=medium
-
-  * Rebuild 
-
- -- Rahman Yusri Aftian <aftian@blankon.id>  Sat, 03 Sep 2016 07:59:18 +0700
 
 appstream (0.10.0-2) unstable; urgency=medium
 
