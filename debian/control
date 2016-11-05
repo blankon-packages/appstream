@@ -2,7 +2,7 @@ Source: appstream
 Section: admin
 Priority: optional
 Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
-OSBC-Original-Maintainer: Matthias Klumpp <mak@debian.org>
+XSBC-Original-Maintainer: Matthias Klumpp <mak@debian.org>
 Build-Depends: cmake (>= 2.8),
                debhelper (>= 9.0.0),
                gettext,
