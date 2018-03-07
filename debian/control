@@ -3,31 +3,32 @@ Section: admin
 Priority: optional
 Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
 XSBC-Original-Maintainer: Matthias Klumpp <mak@debian.org>
-Build-Depends: cmake (>= 2.8),
-               debhelper (>= 10),
+Build-Depends: debhelper (>= 11),
                gettext,
                gobject-introspection,
                gtk-doc-tools,
-               itstool,
-               libgirepository1.0-dev (>= 1.32),
+               libgirepository1.0-dev (>= 1.53),
                libglib2.0-dev (>= 2.46),
                libstemmer-dev,
                libxml2-dev (>= 2.8.0),
                libyaml-dev (>= 0.1.6),
+               meson (>= 0.42),
                qtbase5-dev (>= 5.6),
-               valac,
-               xmlto
-Standards-Version: 3.9.8
+               valac
+Standards-Version: 4.1.2
 Homepage: http://www.freedesktop.org/wiki/Distributions/AppStream/
-Vcs-Git: https://anonscm.debian.org/git/pkg-packagekit/appstream.git
-Vcs-Browser: https://anonscm.debian.org/git/pkg-packagekit/appstream.git
+Vcs-Git: https://salsa.debian.org/pkgutopia-team/appstream.git
+Vcs-Browser: https://salsa.debian.org/pkgutopia-team/appstream
 
 Package: appstream
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends}
-Breaks: appstream-index (<< ${source:Version})
+Breaks: appstream-index (<< ${source:Version}),
+        gnome-software (<< 3.22.5-1),
+        plasma-discover (<< 5.8.5-3)
 Provides: appstream-index
+Suggests: curl
 Description: Software component metadata management
  AppStream is a metadata specification, allowing to write metadata for
  software projects in a standardized format.
@@ -137,6 +138,7 @@ Multi-Arch: foreign
 Section: doc
 Depends: ${misc:Depends}
 Suggests: appstream
+Breaks: appstream (<< 0.11.8)
 Description: Developer documentation for AppStream
  AppStream is a metadata specification, allowing to write metadata for
  software projects in a standardized format. This allows software centers
@@ -145,13 +147,3 @@ Description: Developer documentation for AppStream
  unknown file type or to make missing firmware available).
  .
  This package provides developer documentation for AppStream.
-
-Package: appstream-index
-Architecture: all
-Section: oldlibs
-Priority: extra
-Depends: appstream (>= ${source:Version}),
-         ${misc:Depends}
-Description: Transitional package (appstream-index -> appstream)
- Transitional dummy package replacing appstream-index with
- appstream.

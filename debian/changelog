@@ -1,8 +1,126 @@
-appstream (0.10.5-1blankon1) tambora; urgency=medium
+appstream (0.11.8-3) unstable; urgency=medium
 
-  * New Upstream Release 
+  * appstream-doc breaks older appstream package versions (Closes: #888301)
+    - The upstream NEWS file accidentally moved from appstream to
+      appstream-doc, and now that it is there it makes sense to
+      keep it in the -doc package.
 
- -- Rahman Yusri Aftian <aftian@blankon.id>  Fri, 30 Dec 2016 11:48:23 +0700
+ -- Matthias Klumpp <mak@debian.org>  Wed, 24 Jan 2018 20:50:20 +0100
+
+appstream (0.11.8-2) unstable; urgency=medium
+
+  * qt-define-locations-nodebug.patch: Allow finding the Qt library
+    for non-debug builds correctly again (Closes: #888144)
+
+ -- Matthias Klumpp <mak@debian.org>  Wed, 24 Jan 2018 20:32:40 +0100
+
+appstream (0.11.8-1) unstable; urgency=medium
+
+  * New upstream version: 0.11.8
+  * Update Vcs-* URLs for Salsa migration
+  * Bump dh compat level to 11
+
+ -- Matthias Klumpp <mak@debian.org>  Mon, 22 Jan 2018 23:58:02 +0100
+
+appstream (0.11.7-1) unstable; urgency=medium
+
+  * New upstream version: 0.11.7
+  * Drop patches: Applied upstream
+  * Make appstream package suggest curl
+  * Bump standards version: No changes needed
+  * Update .symbols file
+
+ -- Matthias Klumpp <mak@debian.org>  Sun, 22 Oct 2017 19:52:02 +0200
+
+appstream (0.11.6-2) unstable; urgency=medium
+
+  * fix-screenshot-validate-loop.patch: Fix endless loop when
+    validating screenshots
+
+ -- Matthias Klumpp <mak@debian.org>  Sun, 08 Oct 2017 17:17:46 +0200
+
+appstream (0.11.6-1) unstable; urgency=medium
+
+  * New upstream version: 0.11.6
+
+ -- Matthias Klumpp <mak@debian.org>  Mon, 02 Oct 2017 22:18:42 +0200
+
+appstream (0.11.5-1) unstable; urgency=medium
+
+  * New upstream version 0.11.5
+    - Makes Qt CMake file work on non-64bit-arches again (Closes: #874169)
+  * Bump standards version: No changes needed
+
+ -- Matthias Klumpp <mak@debian.org>  Mon, 04 Sep 2017 18:22:14 +0200
+
+appstream (0.11.4-1) unstable; urgency=medium
+
+  * New upstream version: 0.11.4
+  * Adjust packaging to use the Meson buildsystem
+  * Update .install files
+  * Update .symbols file
+  * Fail on missing files
+  * Trim & update build-dependencies
+    - xmlto is no longer needed
+    - itstool is no longer needed
+    - libgirepository1.0-dev >= 1.53, older versions have bugs
+      breaking the build.
+
+ -- Matthias Klumpp <mak@debian.org>  Wed, 30 Aug 2017 19:56:48 +0200
+
+appstream (0.11.3-1) unstable; urgency=medium
+
+  * New upstream version: 0.11.3
+
+ -- Matthias Klumpp <mak@debian.org>  Fri, 04 Aug 2017 13:14:34 -0400
+
+appstream (0.11.2-1) unstable; urgency=medium
+
+  * New upstream version: 0.11.2
+  * Update symbols file
+
+ -- Matthias Klumpp <mak@debian.org>  Tue, 18 Jul 2017 20:36:34 +0200
+
+appstream (0.11.1-1) unstable; urgency=medium
+
+  * New upstream version: 0.11.1
+  * Update .symbols file
+  * Fix autopkgtest
+
+ -- Matthias Klumpp <mak@debian.org>  Sun, 02 Jul 2017 16:32:06 +0200
+
+appstream (0.11.0-1) unstable; urgency=medium
+
+  * New upstream version: 0.11.0
+  * Drop appstream-index transitional package
+  * Drop all patches: Applied upstream
+  * Update symbols file
+  * Bump standards version: No changes needed
+  * Use noawait triggers for cache rebuilds
+
+ -- Matthias Klumpp <mak@debian.org>  Sat, 24 Jun 2017 17:35:18 +0200
+
+appstream (0.10.6-2) unstable; urgency=medium
+
+  * vala-deps.patch: Add Vala dependency file
+    - Fixes Vala builds which don't explicitly depend on GIO already.
+  * yaml-serialize-crash.patch: Don't crash when serializing components
+    with a session DBus provides to YAML.
+  * no-cache-if-no-cpts.patch: Don't attempt (and fail) to create a cache
+    if there are no components at all to serialize.
+  * no-gvfsd-root.patch: Ensure gvfsd and friends don't get spawned as
+    root (or at all in case of ascli). (Closes: #852696)
+
+ -- Matthias Klumpp <mak@debian.org>  Wed, 08 Mar 2017 20:48:26 +0100
+
+appstream (0.10.6-1) unstable; urgency=medium
+
+  * New upstream version: 0.10.6
+    - APT will no longer download icons by default if
+      there are no GUI frontends available that use them (Closes: #847543)
+    - AppStream GUIs will need to tell APT that they require icons.
+
+ -- Matthias Klumpp <mak@debian.org>  Sun, 22 Jan 2017 19:56:54 +0100
 
 appstream (0.10.5-1) unstable; urgency=medium
 
@@ -20,15 +138,9 @@ appstream (0.10.4-1) unstable; urgency=medium
 
  -- Matthias Klumpp <mak@debian.org>  Sun, 27 Nov 2016 19:14:15 +0100
 
-appstream (0.10.3-1blankon1) tambora; urgency=medium
-
-  * Upload to tambora 
-
- -- Rahman Yusri Aftian <aftian@blankon.id>  Fri, 04 Nov 2016 14:10:06 +0700
-
 appstream (0.10.3-1) unstable; urgency=medium
 
-  * New upstream version 0.10.3
+  * New upstream version: 0.10.3
   * Update Qt package name for API break
 
  -- Matthias Klumpp <mak@debian.org>  Tue, 01 Nov 2016 16:46:12 +0100
